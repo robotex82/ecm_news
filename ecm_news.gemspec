@@ -18,4 +18,25 @@ Gem::Specification.new do |s|
   s.add_dependency "rails", "~> 3.2.8"
 
   s.add_development_dependency "sqlite3"
+
+  # Development Server  
+  s.add_development_dependency "thin"  
+  
+  # Documentation
+  s.add_development_dependency "yard"
+  
+  # Tests
+  s.add_development_dependency "capybara"    
+  s.add_development_dependency "rspec-rails", "~> 2.0"  
+  s.add_development_dependency "shoulda-matchers"
+  
+  # Fake Data Generation
+  s.add_development_dependency "factory_girl_rails", "~> 1.0"
+  s.add_development_dependency 'ffaker'  
+  s.add_development_dependency 'forgery', '0.5.0'
+  
+  # Test automation
+  # s.add_development_dependency 'guard-rails' # See gemfile for a patched version, for engine support.
+  s.add_development_dependency 'guard-rspec'
+  s.add_development_dependency 'guard-bundler'  
 end
