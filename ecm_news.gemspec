@@ -29,9 +29,9 @@ Gem::Specification.new do |s|
   s.add_development_dependency "capybara"    
   s.add_development_dependency "rspec-rails", "~> 2.0"  
   s.add_development_dependency "shoulda-matchers"
+  s.add_development_dependency "factory_girl_rails", "~> 1.0"
   
   # Fake Data Generation
-  s.add_development_dependency "factory_girl_rails", "~> 1.0"
   s.add_development_dependency 'ffaker'  
   s.add_development_dependency 'forgery', '0.5.0'
   
