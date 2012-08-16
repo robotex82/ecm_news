@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    ecm_news (0.0.1)
+    ecm_news (0.0.1.pre)
       rails (~> 3.2.8)
 
 GEM
