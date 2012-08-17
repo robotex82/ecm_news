@@ -1,3 +1,5 @@
+require 'ffaker'
+
 # This will guess the User class
 FactoryGirl.define do
   factory :ecm_news_item, :class => 'Ecm::News::Item' do
