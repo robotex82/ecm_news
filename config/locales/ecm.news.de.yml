@@ -1,0 +1,9 @@
+de:
+  ecm:
+    news:
+      active_admin:
+        menu: News
+      item:
+        actions:
+          more: Mehr
+        messages:

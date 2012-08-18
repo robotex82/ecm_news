@@ -18,6 +18,7 @@ Gem::Specification.new do |s|
   s.add_dependency "rails", "~> 3.2.8"
   
   # Module dependencies  
+  s.add_dependency 'acts_as_markup'
   s.add_dependency 'friendly_id'
   
   s.add_development_dependency "sqlite3"
