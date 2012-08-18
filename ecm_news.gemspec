@@ -19,6 +19,7 @@ Gem::Specification.new do |s|
   
   # Module dependencies  
   s.add_dependency 'acts_as_markup'
+  s.add_dependency 'acts_as_published', '0.0.5.pre'
   s.add_dependency 'friendly_id'
   
   s.add_development_dependency "sqlite3"
@@ -29,11 +30,16 @@ Gem::Specification.new do |s|
   # Documentation
   s.add_development_dependency "yard"
   
+  # Active admin
+  s.add_development_dependency 'sass-rails'
+  s.add_development_dependency 'coffee-rails' 
+
+  
   # Tests
-  s.add_development_dependency "capybara"    
-  s.add_development_dependency "rspec-rails", "~> 2.0"  
-  s.add_development_dependency "shoulda-matchers"
-  s.add_development_dependency "factory_girl_rails", "~> 1.0"
+  s.add_development_dependency 'capybara'    
+  s.add_development_dependency 'rspec-rails', '~> 2.0'  
+  s.add_development_dependency 'shoulda-matchers'
+  s.add_development_dependency 'factory_girl_rails', '~> 1.0'
   
   # Fake Data Generation
   s.add_development_dependency 'ffaker'  

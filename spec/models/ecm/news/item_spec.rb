@@ -13,6 +13,12 @@ module Ecm
         
       # validations
       it { should validate_presence_of(:title) }
+
+      it "should only accept unique titles" do
+        FactoryGirl.create(:ecm_news_item)
+        Ecm::News::Item.new.should validate_uniqueness_of( :title )
+      end
+
       it { should validate_presence_of(:body) } 
       it { should validate_presence_of(:markup_language) }  
       %w(markdown textile mediawiki rdoc).each do |value|

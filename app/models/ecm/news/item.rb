@@ -3,12 +3,16 @@ class Ecm::News::Item < ActiveRecord::Base
   self.table_name = 'ecm_news_items'
   
   # acts as markup
-  # acts_as_textile :body
   acts_as_markup :language => :variable, :columns => [ :body ]
+  
+  # acts as published
+  include ActsAsPublished::ActiveRecord
+  acts_as_published
   
   # attributes
   attr_accessible :body, 
                   :link_to_more, 
+                  :markup_language,
                   :published_at, 
                   :slug, 
                   :title
@@ -24,7 +28,7 @@ class Ecm::News::Item < ActiveRecord::Base
   friendly_id :title, :use => :slugged
                   
   # validations
-  validates :title, :presence => true
+  validates :title, :presence => true, :uniqueness => true
   validates :body,  :presence => true
   validates :markup_language, :presence  => true, 
                               :inclusion => MARKUP_LANGAUGES
