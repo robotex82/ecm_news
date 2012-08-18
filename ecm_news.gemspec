@@ -19,7 +19,7 @@ Gem::Specification.new do |s|
   
   # Module dependencies  
   s.add_dependency 'acts_as_markup'
-  s.add_dependency 'acts_as_published', '0.0.5.pre'
+  s.add_dependency 'acts_as_published', '0.0.7.pre'
   s.add_dependency 'friendly_id'
   
   s.add_development_dependency "sqlite3"
@@ -33,7 +33,6 @@ Gem::Specification.new do |s|
   # Active admin
   s.add_development_dependency 'sass-rails'
   s.add_development_dependency 'coffee-rails' 
-
   
   # Tests
   s.add_development_dependency 'capybara'    

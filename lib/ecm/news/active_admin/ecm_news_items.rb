@@ -36,7 +36,7 @@ include ActsAsPublished::ActiveAdminHelper
     default_actions
   end
   
-  show do
+  show :title => :to_s do
     attributes_table do
       row :title
       row :published_at

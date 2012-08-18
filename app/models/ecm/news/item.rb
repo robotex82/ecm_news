@@ -33,6 +33,12 @@ class Ecm::News::Item < ActiveRecord::Base
   validates :markup_language, :presence  => true, 
                               :inclusion => MARKUP_LANGAUGES
   
+  # public methods
+  
+  def to_s
+    title
+  end  
+  
   private
   
   def set_defaults
