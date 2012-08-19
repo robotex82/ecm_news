@@ -1,1 +1,3 @@
-<h1>Ecm::News::Items#index</h1>
+<h1><%= I18n.t('ecm.news.news') %></h1>
+
+<%= render :partial => 'item_preview', :collection => @items, :as => :item %>

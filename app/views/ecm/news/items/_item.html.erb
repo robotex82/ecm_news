@@ -1,0 +1,13 @@
+<div class="news-item show">
+  <h1><%= item.title %></h1>
+  <small class="item-published_at"><%= item.published_at %></small>
+  
+  <p class="item-body"><%= item.body %></p>
+
+  <hr />
+
+  <%=  link_to(ecm_news_items_path, :class => 'btn link-back') do %>
+    <i class="icon-arrow-left"></i>
+    <%= I18n.t('ecm.news.item.actions.back') %>
+  <% end %>
+</div>

@@ -5,5 +5,7 @@ de:
         menu: News
       item:
         actions:
+          back: Zurück
           more: Mehr
         messages:
+      news: News

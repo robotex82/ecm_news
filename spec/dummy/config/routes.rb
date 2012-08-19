@@ -4,6 +4,8 @@ Dummy::Application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   
   Ecm::News::Routing.routes(self)
+  
+  root :to => 'ecm/news/items#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
