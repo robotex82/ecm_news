@@ -19,7 +19,7 @@ Gem::Specification.new do |s|
   
   # Module dependencies  
   s.add_dependency 'acts_as_markup'
-  s.add_dependency 'acts_as_published', '0.0.7.pre'
+  s.add_dependency 'acts_as_published', '0.0.8.pre'
   s.add_dependency 'friendly_id'
   
   s.add_development_dependency "sqlite3"
