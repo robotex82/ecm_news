@@ -19,9 +19,9 @@ namespace :ecm_news do
 
       # Create example news items
       100.times do
-        Ecm::News::Item.create! do |i|
-          # i.locale = I18n.available_locales.choice.to_s      
+        Ecm::News::Item.create! do |i|   
           i.title           = Faker::Lorem.paragraph(1).split(" ")[0..3].join(" ")
+          i.locale          = I18n.available_locales.choice.to_s
           i.body            = Faker::Lorem.paragraph(rand(9) + 1)
           i.link_to_more    = [true, false].choice
           i.published       = [true, false].choice  

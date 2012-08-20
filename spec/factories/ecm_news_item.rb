@@ -6,6 +6,7 @@ FactoryGirl.define do
     sequence(:title) do |n| 
       "#{Faker::Lorem.paragraph(1)} #{n}" 
     end  
+    locale 'en'
     body Faker::Lorem.paragraph(10)
     markup_language Ecm::News::Item::MARKUP_LANGAUGES.first
     published_at 5.minutes.ago

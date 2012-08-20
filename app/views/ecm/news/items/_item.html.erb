@@ -2,7 +2,7 @@
   <h1><%= item.title %></h1>
   <small class="item-published_at"><%= item.published_at %></small>
   
-  <p class="item-body"><%= item.body %></p>
+  <p class="item-body"><%= mu(item, :body) %></p>
 
   <hr />
 

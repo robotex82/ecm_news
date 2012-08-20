@@ -13,15 +13,23 @@ module Ecm
         
       # validations
       it { should validate_presence_of(:title) }
-
       it "should only accept unique titles" do
         FactoryGirl.create(:ecm_news_item)
         Ecm::News::Item.new.should validate_uniqueness_of( :title )
       end
+      
+      it { should validate_presence_of(:locale) }
+      I18n.available_locales.map(&:to_s).each do |value|
+        it { should allow_value(value).for(:locale) }  
+      end
+      %w(some other values that are not allowed).each do |value|
+        it { should_not allow_value(value).for(:locale) }  
+      end 
+
 
       it { should validate_presence_of(:body) } 
       it { should validate_presence_of(:markup_language) }  
-      %w(markdown textile mediawiki rdoc).each do |value|
+      %w(markdown textile rdoc).each do |value|
         it { should allow_value(value).for(:markup_language) }  
       end
       %w(some other values that are not allowed).each do |value|

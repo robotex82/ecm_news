@@ -1,3 +1,9 @@
+# The default locale is :en-GB and all translations from config/locales/*.rb,yml are auto loaded.
+I18n.available_locales = [:de, :en]
+I18n.default_locale = :de
+I18n.load_path += Dir[Rails.root.join('config', 'locales', '*.{rb,yml}').to_s]
+I18n.reload!
+
 ActiveAdmin.setup do |config|
 
   # == Site Title

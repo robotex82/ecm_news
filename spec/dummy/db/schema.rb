@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(:version => 20120818125943) do
 
   create_table "ecm_news_items", :force => true do |t|
     t.string   "title"
+    t.string   "locale"
     t.text     "body"
     t.datetime "published_at"
     t.boolean  "link_to_more"

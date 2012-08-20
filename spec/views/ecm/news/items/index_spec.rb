@@ -1,6 +1,10 @@
 require 'spec_helper'
 
 describe "ecm/news/items/index" do
+  before(:all) do
+    I18n.locale = :en
+  end
+    
   it "renders _item_preview partial for each news item" do
     assign(:items, [stub_model(Ecm::News::Item), stub_model(Ecm::News::Item)])
     render

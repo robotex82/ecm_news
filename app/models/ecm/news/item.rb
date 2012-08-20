@@ -12,6 +12,7 @@ class Ecm::News::Item < ActiveRecord::Base
   # attributes
   attr_accessible :body, 
                   :link_to_more, 
+                  :locale,
                   :markup_language,
                   :published_at, 
                   :slug, 
@@ -21,7 +22,7 @@ class Ecm::News::Item < ActiveRecord::Base
   after_initialize :set_defaults   
   
   # constants
-  MARKUP_LANGAUGES = %w(markdown textile mediawiki rdoc)             
+  MARKUP_LANGAUGES = %w(markdown textile rdoc)             
                   
   # friendly id
   extend FriendlyId
@@ -29,6 +30,8 @@ class Ecm::News::Item < ActiveRecord::Base
                   
   # validations
   validates :title, :presence => true, :uniqueness => true
+  validates :locale, :presence  => true, 
+                     :inclusion => I18n.available_locales.map(&:to_s)
   validates :body,  :presence => true
   validates :markup_language, :presence  => true, 
                               :inclusion => MARKUP_LANGAUGES
