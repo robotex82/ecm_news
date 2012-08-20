@@ -5,6 +5,7 @@ en:
         menu: news
       item:
         actions:
+          all: show all
           back: back
           more: more
         messages:

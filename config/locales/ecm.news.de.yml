@@ -5,6 +5,7 @@ de:
         menu: News
       item:
         actions:
+          all: Alle anzeigen
           back: Zurück
           more: Mehr
         messages:

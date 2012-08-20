@@ -5,7 +5,7 @@ Dummy::Application.routes.draw do
   
   Ecm::News::Routing.routes(self)
   
-  root :to => 'ecm/news/items#index'
+  root :to => 'home#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
