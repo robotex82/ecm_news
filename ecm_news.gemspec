@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
 
-  s.add_dependency "rails", "~> 3.2.8"
+  s.add_dependency "rails", "~> 3.2.7"
   
   # Module dependencies  
   s.add_dependency 'acts_as_markup'

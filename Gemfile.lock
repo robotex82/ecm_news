@@ -30,7 +30,7 @@ PATH
       acts_as_markup
       acts_as_published (= 0.0.8.pre)
       friendly_id
-      rails (~> 3.2.8)
+      rails (~> 3.2.7)
 
 GEM
   remote: http://rubygems.org/

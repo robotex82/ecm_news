@@ -7,6 +7,7 @@ de:
         actions:
           all: Alle anzeigen
           back: Zurück
-          more: Mehr
+          more: Weiterlesen
         messages:
+          empty: Keine Neuigkeiten gefunden.
       news: News

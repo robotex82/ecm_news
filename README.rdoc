@@ -1,3 +1,37 @@
-= EcmNews
+= ECM News
+
+News module for active admin.
+
+= Installation
+
+Add the gem to your bundle:
+
+  # Gemfile
+  gem 'ecm_news'
+  
+Install your bundle:  
+  
+  > bundle install
+
+Add migrations:
+
+  > rake ecm_news_engine:install:migrations
+  
+Migrate:
+
+  > rake db:migrate
+  
+Add the routes:
+
+  # config/routes.rb
+  Ecm::News::Routing.routes(self)
+  
+= Usage
+
+= Helpers
+
+  <%= render_news(count) %>
+
+= License
 
 This project rocks and uses MIT-LICENSE.

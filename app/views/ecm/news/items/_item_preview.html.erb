@@ -1,6 +1,6 @@
 <div class="news-item preview">
   <h2 class="item-title"><%= item.title %></h2>
-  <small class="item-published_at"><%= item.published_at %></small>
+  <small class="item-published_at"><%= I18n.l(item.published_at) %></small>
   
   <p class="item-body"><%= truncate(mu(item, :body), :length => 250, :separator => ' ').html_safe %></p>
   

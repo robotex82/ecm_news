@@ -1,6 +1,7 @@
 module Ecm::NewsHelper
   def render_news(count)
     items = Ecm::News::Item.published.where(:locale => I18n.locale.to_s).limit(count)
+    return I18n.t('ecm.news.item.messages.empty') if items.empty?
     output = ''
     output << render(:partial => 'ecm/news/items/item_preview', :collection => items, :as => :item)
     output << link_to(ecm_news_items_path, :class => 'btn list-link') do

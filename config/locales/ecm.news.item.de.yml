@@ -10,6 +10,7 @@ de:
         body: Inhalt
         created_at: Erstellt am
         link_to_more: Vorschau verlinken
+        locale: Sprache
         markup_language: Markup Sprache
         published: Veröffentlicht?
         published_at: Veröffentlicht am
