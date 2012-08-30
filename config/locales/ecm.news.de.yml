@@ -5,9 +5,9 @@ de:
         menu: News
       item:
         actions:
-          all: Alle anzeigen
+          all: Alle News anzeigen
           back: Zurück
           more: Weiterlesen
         messages:
-          empty: Keine Neuigkeiten gefunden.
+          empty: Keine News gefunden.
       news: News
