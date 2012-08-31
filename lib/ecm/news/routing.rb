@@ -15,7 +15,9 @@ module Ecm
         )
 
         router.resources :ecm_news_items, :only => options[:item_actions],
-                                          :controller => 'ecm/news/items'
+                                          :controller => 'ecm/news/items' do
+          router.get 'page/:page', :action => :index, :on => :collection
+        end
       end
     end
   end

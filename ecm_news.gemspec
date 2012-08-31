@@ -21,6 +21,8 @@ Gem::Specification.new do |s|
   s.add_dependency 'acts_as_markup'
   s.add_dependency 'acts_as_published', '0.0.8.pre'
   s.add_dependency 'friendly_id'
+  s.add_dependency 'kaminari'
+  s.add_dependency 'bootstrap-kaminari-views'
   
   s.add_development_dependency "sqlite3"
 

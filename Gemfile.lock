@@ -26,10 +26,12 @@ GIT
 PATH
   remote: .
   specs:
-    ecm_news (0.0.1.pre)
+    ecm_news (0.0.2.pre)
       acts_as_markup
       acts_as_published (= 0.0.8.pre)
+      bootstrap-kaminari-views
       friendly_id
+      kaminari
       rails (~> 3.2.7)
 
 GEM
@@ -81,6 +83,9 @@ GEM
       activesupport (>= 3.0.0)
     arel (3.0.2)
     bcrypt-ruby (3.0.1)
+    bootstrap-kaminari-views (0.0.2)
+      kaminari (>= 0.13)
+      rails (>= 3.1)
     bourbon (2.1.1)
       sass (>= 3.1)
     builder (3.0.0)

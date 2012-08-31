@@ -1,4 +1,9 @@
 de:
+  active_admin:
+    scopes:
+      all: Alle
+      published: Veröffentlicht
+      unpublished: Nicht veröffentlicht 
   ecm:
     news:
       active_admin:
