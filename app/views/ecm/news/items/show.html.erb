@@ -1,1 +1,6 @@
 <%= render @item %>
+
+<%=  link_to(:back, :class => 'btn link-back') do %>
+  <i class="icon-arrow-left"></i>
+  <%= I18n.t('ecm.news.item.actions.back') %>
+<% end %>

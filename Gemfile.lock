@@ -26,7 +26,7 @@ GIT
 PATH
   remote: .
   specs:
-    ecm_news (0.0.2.pre)
+    ecm_news (0.1.0.pre)
       acts_as_markup
       acts_as_published (= 0.0.8.pre)
       bootstrap-kaminari-views
