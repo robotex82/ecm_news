@@ -17,3 +17,6 @@ de:
         slug: Freundliche ID
         title: Titel
         updated_at: Aktualisiert am
+  resources:
+    ecm_news_items: news-eintraege
+

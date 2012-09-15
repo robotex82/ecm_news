@@ -17,3 +17,6 @@ en:
         slug: friendly id
         title: title
         updated_at: updated at
+  resources:
+    ecm_news_items: news-items
+
