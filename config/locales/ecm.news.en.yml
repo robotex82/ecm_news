@@ -16,4 +16,11 @@ en:
         messages:
           empty: no news found.
       news: news
+  views:
+    pagination:
+      first: "&laquo; First"
+      last: "Last &raquo;"
+      previous: "&lsaquo; Prev"
+      next: "Next &rsaquo;"
+      truncate: "..."
 

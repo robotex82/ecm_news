@@ -16,4 +16,11 @@ de:
         messages:
           empty: Keine News gefunden.
       news: News
+  views:
+    pagination:
+      first: "&laquo; Erste Seite"
+      last: "Letzte Seite &raquo;"
+      previous: "&lsaquo; Zurück"
+      next: "Vor &rsaquo;"
+      truncate: "..."
 

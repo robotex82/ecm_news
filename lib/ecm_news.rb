@@ -5,9 +5,11 @@ require 'kaminari'
 require 'bootstrap-kaminari-views'
 
 require 'ecm/news/engine'
+require 'ecm/news/configuration'
 require 'ecm/news/routing'
 
 module Ecm
   module News
+    extend Configuration
   end
 end
