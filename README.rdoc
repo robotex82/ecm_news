@@ -12,6 +12,10 @@ Add the gem to your bundle:
 Install your bundle:  
   
   > bundle install
+  
+Generate initializer:
+
+  > rails generate ecm:news:install 
 
 Add migrations:
 
