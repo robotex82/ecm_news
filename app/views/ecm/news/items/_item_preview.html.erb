@@ -5,7 +5,7 @@
   <p class="item-body"><%= truncate(mu(item, :body), :length => 250, :separator => ' ').html_safe %></p>
   
 
-  <%=  link_to(item, :class => 'btn more-link') do %><i class="icon-arrow-right"></i><%= I18n.t('ecm.news.item.actions.more') %><% end %>
+  <%=  link_to(item, :class => 'btn more-link') do %><i class="icon-arrow-right"></i> <%= I18n.t('ecm.news.item.actions.more') %><% end %>
 
   <hr />
 </div>
