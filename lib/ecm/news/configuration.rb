@@ -9,8 +9,8 @@ module Ecm
         yield self
       end
 
-      # mattr_accessor :foo
-      # @@foo = nil
+      mattr_accessor :render_news_default_count
+      @@render_news_default_count = 2
     end
   end
 end
