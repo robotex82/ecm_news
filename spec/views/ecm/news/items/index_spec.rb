@@ -15,8 +15,8 @@ describe "ecm/news/items/index" do
     render
   end
     
-  it "renders _item_preview partial for each news item" do
-    view.should render_template(:partial => "_item_preview", :count => 3)
+  it "renders _item_for_preview partial for each news item" do
+    view.should render_template(:partial => "_item_for_preview", :count => 3)
   end
   
   it "shows headings for all items" do

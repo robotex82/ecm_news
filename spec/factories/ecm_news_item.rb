@@ -1,13 +1,8 @@
-require 'ffaker'
-
-# This will guess the User class
 FactoryGirl.define do
   factory :ecm_news_item, :class => 'Ecm::News::Item' do
-    sequence(:title) do |n| 
-      "#{Faker::Lorem.paragraph(1)} #{n}" 
-    end  
+    sequence(:title) { "News Item ##{i}" }
     locale 'en'
-    body Faker::Lorem.paragraph(10)
+    body 'This is the news item body'
     markup_language Ecm::News::Item::MARKUP_LANGAUGES.first
     published_at 5.minutes.ago
   end
