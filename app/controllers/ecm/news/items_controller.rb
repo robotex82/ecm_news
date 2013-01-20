@@ -5,5 +5,7 @@ class Ecm::News::ItemsController < ApplicationController
 
   def show
     @item = Ecm::News::Item.published.where(:locale => I18n.locale.to_s).find(params[:id])
+    @meta_description = @item.title
+    @title = @item.title
   end
 end
