@@ -6,12 +6,12 @@ include ActsAsPublished::ActiveAdminHelper
 
   # menu entry settings
   menu :parent => Proc.new { I18n.t('ecm.news.active_admin.menu') }.call
-  
+
   # scopes
   scope :all
   scope :published
   scope :unpublished
-  
+
   form do |f|
     f.inputs do
       f.input :title
@@ -19,14 +19,14 @@ include ActsAsPublished::ActiveAdminHelper
       f.input :body
       f.input :published, :as => :boolean
     end
-    
+
     f.inputs do
-      f.input :markup_language, :as => :select, :collection => Ecm::News::Item::MARKUP_LANGAUGES    
+      f.input :markup_language, :as => :select, :collection => Ecm::News::Configuration.markup_languages.map(&:to_s)
     end
-    
+
     f.actions
   end
-  
+
   index do
     selectable_column
     column :title
@@ -39,7 +39,7 @@ include ActsAsPublished::ActiveAdminHelper
     column :updated_at
     default_actions
   end
-  
+
   show :title => :to_s do
     attributes_table do
       row :title
@@ -50,11 +50,12 @@ include ActsAsPublished::ActiveAdminHelper
       row :created_at
       row :updated_at
     end
-    
+
     panel Ecm::News::Item.human_attribute_name(:body) do
       div do
         mu(ecm_news_item, :body)
-      end  
+      end
     end
   end
 end if defined?(::ActiveAdmin)
+

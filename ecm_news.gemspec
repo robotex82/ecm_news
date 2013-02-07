@@ -15,11 +15,11 @@ Gem::Specification.new do |s|
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
 
-  s.add_dependency "rails", "~> 3.2.7"
+  s.add_dependency "rails", "~> 3.2.11"
   
   # Module dependencies  
   s.add_dependency 'acts_as_markup'
-  s.add_dependency 'acts_as_published', '0.0.8.pre'
+  s.add_dependency 'acts_as_published', '~> 0.0.8.pre'
   s.add_dependency 'friendly_id'
   s.add_dependency 'kaminari'
   s.add_dependency 'bootstrap-kaminari-views'
@@ -38,16 +38,13 @@ Gem::Specification.new do |s|
   
   # Tests
   s.add_development_dependency 'capybara'    
-  s.add_development_dependency 'rspec-rails', '~> 2.0'  
+  s.add_development_dependency 'rspec-rails', '~> 2.12.0'  
   s.add_development_dependency 'shoulda-matchers'
   s.add_development_dependency 'factory_girl_rails', '~> 1.0'
-  
-  # Fake Data Generation
-  s.add_development_dependency 'ffaker'  
-  s.add_development_dependency 'forgery', '0.5.0'
   
   # Test automation
   # s.add_development_dependency 'guard-rails' # See gemfile for a patched version, for engine support.
   s.add_development_dependency 'guard-rspec'
   s.add_development_dependency 'guard-bundler'  
+  s.add_development_dependency 'rb-inotify', '~> 0.8.8'
 end
