@@ -1,5 +1,6 @@
 module Ecm
   module News
-    VERSION = "0.1.10.pre"
-  end  
+    VERSION = "0.1.11.pre"
+  end
 end
+

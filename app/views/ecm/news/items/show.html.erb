@@ -1,3 +1,5 @@
+<% content_for :meta_description, @item.title %>
+<% content_for :title, @item.title %>
 <%= render @item %>
 
 <%=  link_to(:back, :class => 'btn link-back') do %>

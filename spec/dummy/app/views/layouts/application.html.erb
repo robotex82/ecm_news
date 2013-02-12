@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Dummy</title>
+  <title><%= content_for?(:title) ? yield(:title) : 'Dummy' %></title>
+  <% if content_for?(:meta_description) %>
+    <meta name="description" content="<%= yield(:meta_description) %>">
+  <% end %>  
+
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>

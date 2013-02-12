@@ -1,3 +1,5 @@
+<% content_for :meta_description, I18n.t('ecm.news.news') %>
+<% content_for :title, I18n.t('ecm.news.news') %>
 <h1><%= I18n.t('ecm.news.news') %></h1>
 
 <%= render :partial => 'item_for_preview', :collection => @items, :as => :item %>
