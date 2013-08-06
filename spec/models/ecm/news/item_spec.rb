@@ -4,6 +4,11 @@ module Ecm::News
   describe Item do
     subject { FactoryGirl.build(:ecm_news_item) }
 
+    describe 'associations' do
+      it { should have_many :attached_pictures }
+      it { should have_many :pictures }
+    end # describe 'associations'
+
     # callbacks
     context 'sets default handler' do
       subject { Ecm::News::Item.new }

@@ -1,0 +1,22 @@
+---
+en:
+  activerecord:
+    models:
+      ecm/news/item:
+        one: news item
+        other: news items
+    attributes:
+      ecm/news/item:
+        body: body
+        created_at: created at
+        link_to_more: link to more?
+        locale: language
+        markup_language: markup language
+        published: published?
+        published_at: published at
+        slug: friendly id
+        title: title
+        updated_at: updated at
+  resources:
+    ecm_news_items: news-items
+

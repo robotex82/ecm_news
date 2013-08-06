@@ -24,6 +24,8 @@ include ActsAsPublished::ActiveAdminHelper
       f.input :markup_language, :as => :select, :collection => Ecm::News::Configuration.markup_languages.map(&:to_s)
     end
 
+    form_inputs_for_pictureable(f)
+
     f.actions
   end
 
@@ -54,8 +56,10 @@ include ActsAsPublished::ActiveAdminHelper
     panel Ecm::News::Item.human_attribute_name(:body) do
       div do
         mu(ecm_news_item, :body)
-      end
-    end
-  end
+      end # div
+    end # panel
+
+    panel_for_pictureable
+  end # show
 end if defined?(::ActiveAdmin)
 

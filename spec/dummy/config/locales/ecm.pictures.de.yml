@@ -1,0 +1,17 @@
+de:
+  active_admin:
+    delete_link: "Verknüpfung entfernen"
+  back: Zurück
+  ecm:
+    pictures:
+      actions:
+        view: Anzeigen
+      active_admin:
+        menu: "Bilder"
+      picture:
+        warnings:
+          missing: "Das Bild %{name} wurde nicht gefunden."
+      picture_gallery:
+        warnings:
+          missing: "Die Galerie %{name} wurde nicht gefunden."
+

@@ -22,7 +22,7 @@ gem 'guard-rails',  :git => 'git://github.com/robotex82/guard-rails.git', :branc
 # Edge active admin
 gem 'activeadmin', :git => 'git://github.com/gregbell/active_admin.git'
 
-# gem 'acts_as_published', :path => '/home/robo/rails/modules/acts_as_published-master'
+gem 'ecm_pictures', :path => '~/rails/modules/ecm_pictures-polymorphic'
 
 unless ENV['TRAVIS_RUBY_VERSION'].nil?
   gem 'pg'

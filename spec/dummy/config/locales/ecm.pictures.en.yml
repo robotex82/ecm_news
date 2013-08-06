@@ -1,0 +1,15 @@
+en:
+  back: back
+  ecm:
+    pictures:
+      actions:
+        view: view
+      active_admin:
+        menu: pictures
+      picture:
+        warnings:
+          missing_gallery: "Could not find picture %{name}"
+      picture_gallery:
+        warnings:
+          missing_gallery: "Could not find picture gallery %{name}"
+
