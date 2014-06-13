@@ -16,15 +16,44 @@ gem "jquery-rails"
 # To use debugger
 # gem 'ruby-debug'
 
-# Patched guard rails
-gem 'guard-rails',  :git => 'git://github.com/robotex82/guard-rails.git', :branch => 'better-engine-support'
+# Patched acts_as_markup for jruby compatibility
+# gem 'acts_as_markup', :path => '~/rails/forks/acts_as_markup-master'
 
 # Edge active admin
-gem 'activeadmin', :git => 'git://github.com/gregbell/active_admin.git'
+# gem 'activeadmin', :git => 'https://github.com/gregbell/active_admin.git'
 
 # gem 'acts_as_published', :path => '/home/robo/rails/modules/acts_as_published-master'
 
 unless ENV['TRAVIS_RUBY_VERSION'].nil?
   gem 'pg'
   gem 'mysql2'
+end
+
+group :development, :test do
+  platforms :ruby do
+    gem "therubyracer" 
+  end
+  
+  platforms :jruby do
+    gem "therubyrhino" 
+  end
+end
+
+group :test do
+  case
+  when RUBY_VERSION < "1.9.3"
+    gem 'capybara', '< 2.0.0'
+  when RUBY_VERSION < "1.9.2"
+    gem 'shoulda-matchers', '< 2.0.0'   
+  else
+    gem 'capybara'
+    gem 'shoulda-matchers'    
+  end
+end
+
+case
+when RUBY_VERSION < "1.9.2"
+  gem 'celluloid', '< 0.12.0'  
+  gem 'rubyzip', '< 1.0.0' 
+else   
 end

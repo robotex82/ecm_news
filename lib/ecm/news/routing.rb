@@ -9,14 +9,16 @@ module Ecm
       # This will only create the show action for items, but omit the index
       # action.
       def self.routes(router, options = {})
-        options.reverse_merge!(
-          { :item_actions => [:index, :show]
-          }
-        )
+        options.reverse_merge!({
+          :item_actions => [:index, :show],
+          :items_controller => 'ecm/news/items'
+        })
 
-        router.resources :ecm_news_items, :only => options[:item_actions],
-                                          :controller => 'ecm/news/items' do
-          router.get 'page/:page', :action => :index, :on => :collection
+        router.resources :ecm_news_items, :only       => options[:item_actions],
+                                          :controller => options[:items_controller] do
+
+          router.get 'page/:page', :action => :index,
+                                   :on     => :collection
         end
       end
     end

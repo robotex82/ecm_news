@@ -9,6 +9,10 @@ require "sprockets/railtie"
 # require "rails/test_unit/railtie"
 
 Bundler.require
+require "jquery/ui/rails"
+require "active_admin"
+require "devise"
+require "quiet_assets"
 require "ecm_news"
 
 module Dummy

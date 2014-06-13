@@ -1,11 +1,12 @@
+require 'ecm/news/active_admin/base'
+
 include ActsAsPublished::ActiveAdminHelper
 
 ::ActiveAdmin.register Ecm::News::Item do
+  Ecm::News::ActiveAdmin::Base.configure(self)
+  
   # acts as published
   acts_as_published_actions
-
-  # menu entry settings
-  menu :parent => Proc.new { I18n.t('ecm.news.active_admin.menu') }.call
 
   # scopes
   scope :all
@@ -32,12 +33,12 @@ include ActsAsPublished::ActiveAdminHelper
     column :title
     column :locale
     column :body do |item|
-      truncate(mu(item, :body), :length => 250, :separator => ' ').html_safe
+      truncate(item.body(:as => :html), :length => 250, :separator => ' ').html_safe
     end
     acts_as_published_columns
     column :created_at
     column :updated_at
-    default_actions
+    actions
   end
 
   show :title => :to_s do
@@ -53,7 +54,7 @@ include ActsAsPublished::ActiveAdminHelper
 
     panel Ecm::News::Item.human_attribute_name(:body) do
       div do
-        mu(ecm_news_item, :body)
+        ecm_news_item.body(:as => :html)
       end
     end
   end

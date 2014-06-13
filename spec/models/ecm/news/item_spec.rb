@@ -2,7 +2,7 @@ require 'spec_helper'
 
 module Ecm::News
   describe Item do
-    subject { FactoryGirl.build(:ecm_news_item) }
+    # subject { FactoryGirl.build(:ecm_news_item) }
 
     # callbacks
     context 'sets default handler' do
@@ -14,6 +14,16 @@ module Ecm::News
     it "should have a friendly id" do
       item = FactoryGirl.create(:ecm_news_item, :title => 'This is an item that should have a friendly id!')
       item.to_param.should == 'this-is-an-item-that-should-have-a-friendly-id'
+    end
+
+    context 'textile support' do
+      before :each do
+        subject.body = '  * This is the body'
+      end
+      
+      it 'should convert the body to html' do
+        expect(subject.body(:as => :html)).to include("<li>This is the body</li>")
+      end
     end
 
     # validations

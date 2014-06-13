@@ -18,5 +18,10 @@ Ecm::News.configure do |config|
   #
   # default: config.default_markup_language = 'textile'
   config.default_markup_language = 'textile'
+
+  # Base Controller from which all controllers in the module inherit.
+  #
+  # default: config.base_controller = 'ApplicationController'
+  config.base_controller = 'ApplicationController'
 end
 

@@ -1,6 +1,6 @@
 <% content_for :meta_description, @item.title %>
 <% content_for :title, @item.title %>
-<%= render @item %>
+<%= render :partial => '/ecm/news/items/item', :locals => { :item => @item } %>
 
 <%=  link_to(:back, :class => 'btn link-back') do %>
   <i class="icon-arrow-left"></i>

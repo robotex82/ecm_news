@@ -9,6 +9,9 @@ module Ecm
         yield self
       end
 
+      mattr_accessor :base_controller
+      @@base_controller = 'ApplicationController'
+
       mattr_accessor :default_markup_language
       @@default_markup_language = nil
 
@@ -20,6 +23,11 @@ module Ecm
 
       mattr_accessor :render_news_default_count
       @@render_news_default_count = 2
+
+      def self.base_controller=(class_name)
+        raise BaseControllerNotDefinedError unless Object.const_defined?(class_name)
+        @@base_controller = class_name.constantize
+      end
     end
   end
 end

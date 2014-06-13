@@ -2,9 +2,6 @@ class Ecm::News::Item < ActiveRecord::Base
   # database settings
   self.table_name = 'ecm_news_items'
 
-  # acts as markup
-  acts_as_markup :language => :variable, :columns => [ :body ]
-
   # acts as published
   include ActsAsPublished::ActiveRecord
   acts_as_published
@@ -26,20 +23,39 @@ class Ecm::News::Item < ActiveRecord::Base
   friendly_id :title, :use => :slugged
 
   # validations
-  validates :title, :presence => true, :uniqueness => true
+  validates :title,  :presence => true, :uniqueness => true
   validates :locale, :presence  => true,
                      :inclusion => I18n.available_locales.map(&:to_s)
-  validates :body,  :presence => true
+  validates :body,   :presence => true
   validates :markup_language, :presence  => true,
                               :inclusion => Ecm::News::Configuration.markup_languages.map(&:to_s)
 
   # public methods
+
+  def body(options = {})
+    options.reverse_merge!(:as => :plain)
+    case options[:as]
+    when :html
+      markup(self[:body])
+    else
+      self[:body]
+    end
+  end
 
   def to_s
     title
   end
 
   private
+
+  def markup(text)
+    case markup_language.to_sym
+    when :textile
+      RedCloth.new(text).to_html
+    else
+      raise "Unsupported markup language #{markup_language}"
+    end
+  end
 
   def set_defaults
     if self.new_record?

@@ -1,7 +1,7 @@
 <div class="news-item preview">
   <h2 class="item-title"><%= item.title %></h2>
   <small class="item-published_at"><%= I18n.l(item.published_at) %></small>
-  <p class="item-body"><%= truncate(mu(item, :body), :length => Ecm::News::Configuration.news_item_preview_length, :separator => ' ').html_safe %></p>
+  <p class="item-body"><%= truncate(item.body(:as => :html), :length => Ecm::News::Configuration.news_item_preview_length, :separator => ' ').html_safe %></p>
   <%= link_to(item, :class => 'btn more-link') do %><i class="icon-arrow-right"></i> <%= I18n.t('ecm.news.item.actions.more') %><% end %>
   <hr />
 </div>
