@@ -22,7 +22,8 @@ gem "jquery-rails"
 # Edge active admin
 # gem 'activeadmin', :git => 'https://github.com/gregbell/active_admin.git'
 
-gem 'acts_as_published', :path => '~/rails/forks/acts_as_published-master'
+# gem 'acts_as_published', :path => '~/rails/forks/acts_as_published-master'
+gem 'acts_as_published', :git => 'https://github.com/robotex82/acts_as_published.git', :branch => 'feature/unpublished_at'
 
 unless ENV['TRAVIS_RUBY_VERSION'].nil?
   gem 'pg'
