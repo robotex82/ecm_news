@@ -4,6 +4,8 @@ de:
       all: Alle
       published: Veröffentlicht
       unpublished: Nicht veröffentlicht
+      visible: Sichtbar
+      invisible: Unsichtbar
   ecm:
     news:
       active_admin:
@@ -17,6 +19,8 @@ de:
           empty: Keine News gefunden.
       news: News
   views:
+    actions:
+      back: 'Zurück'
     pagination:
       first: "&laquo; Erste Seite"
       last: "Letzte Seite &raquo;"

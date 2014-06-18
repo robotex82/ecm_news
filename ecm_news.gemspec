@@ -19,7 +19,7 @@ Gem::Specification.new do |s|
   
   # Module dependencies  
   s.add_dependency 'activeadmin'
-  s.add_dependency 'acts_as_published', '~> 0.0.9.pre'
+  # s.add_dependency 'acts_as_published', '~> 0.0.9.pre'
   s.add_dependency 'friendly_id'
   s.add_dependency 'kaminari'
   s.add_dependency 'bootstrap-kaminari-views'

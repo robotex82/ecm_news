@@ -4,6 +4,7 @@ FactoryGirl.define do
     locale 'en'
     body 'This is the news item body'
     markup_language 'textile'
+    published true
     published_at 5.minutes.ago
   end
 end

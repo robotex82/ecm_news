@@ -17,6 +17,8 @@ en:
           empty: no news found.
       news: news
   views:
+    actions:
+      back: 'back'
     pagination:
       first: "&laquo; First"
       last: "Last &raquo;"

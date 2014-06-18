@@ -1,2 +1,2 @@
-class Ecm::News::BaseController < Anwr::Tos::Configuration.base_controller.constantize
+class Ecm::News::BaseController < Ecm::News::Configuration.base_controller.constantize
 end

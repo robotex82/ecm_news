@@ -14,9 +14,11 @@ en:
         markup_language: markup language
         published: published?
         published_at: published at
+        unpublished_at: unpublished at
         slug: friendly id
         title: title
         updated_at: updated at
+        visible?: visible?
   resources:
     ecm_news_items: news-items
 

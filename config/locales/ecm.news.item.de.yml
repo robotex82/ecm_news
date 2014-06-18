@@ -14,9 +14,11 @@ de:
         markup_language: Markup Sprache
         published: Veröffentlicht?
         published_at: Veröffentlicht am
+        published_at: Veröffentlicht bis
         slug: Freundliche ID
         title: Titel
         updated_at: Aktualisiert am
+        visible?: Sichtbar?
   resources:
     ecm_news_items: news-eintraege
 

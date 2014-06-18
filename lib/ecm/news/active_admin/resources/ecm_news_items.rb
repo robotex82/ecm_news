@@ -10,15 +10,17 @@ include ActsAsPublished::ActiveAdminHelper
 
   # scopes
   scope :all
-  scope :published
-  scope :unpublished
+  scope :visible
+  scope :invisible
 
   form do |f|
     f.inputs do
       f.input :title
       f.input :locale, :as => :select, :collection => I18n.available_locales.map(&:to_s)
       f.input :body
-      f.input :published, :as => :boolean
+      f.input :published
+      f.input :published_at
+      f.input :unpublished_at      
     end
 
     f.inputs do
@@ -42,20 +44,29 @@ include ActsAsPublished::ActiveAdminHelper
   end
 
   show :title => :to_s do
-    attributes_table do
+    panel Ecm::News::Item.human_attribute_name(:body) do
+      div do
+        ecm_news_item.body(:as => :html).html_safe
+      end
+    end
+  end # show
+  
+  sidebar Ecm::News::Item.human_attribute_name(:details), :only => :show do
+    attributes_table_for ecm_news_item do
       row :title
       row :locale
+      row :visible? do |item|
+        I18n.t(item.visible?.to_s)
+      end
+      row :published do |item|
+        I18n.t(item.published.to_s)
+      end
       row :published_at
+      row :unpublished_at
       row :link_to_more
       row :markup_language
       row :created_at
       row :updated_at
-    end
-
-    panel Ecm::News::Item.human_attribute_name(:body) do
-      div do
-        ecm_news_item.body(:as => :html)
-      end
     end
   end
 end if defined?(::ActiveAdmin)
