@@ -48,6 +48,8 @@ class Ecm::News::Item < ActiveRecord::Base
     case markup_language.to_sym
     when :textile
       RedCloth.new(text).to_html
+    when :none
+      text
     else
       raise "Unsupported markup language #{markup_language}"
     end

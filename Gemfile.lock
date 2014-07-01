@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/robotex82/acts_as_published.git
-  revision: 89747de27dc58d010a4ee3e87658fb2c127c4047
+  revision: 20377cbe7812196e4a9fdd89c68076bfde616628
   branch: feature/unpublished_at
   specs:
-    acts_as_published (1.0.0)
+    acts_as_published (1.0.1)
       rails (~> 3.2.7)
 
 PATH
@@ -55,6 +55,11 @@ GEM
       activesupport (= 3.2.18)
       arel (~> 3.0.2)
       tzinfo (~> 0.3.29)
+    activerecord-jdbc-adapter (1.3.8)
+      activerecord (>= 2.2)
+    activerecord-jdbcsqlite3-adapter (1.3.8)
+      activerecord-jdbc-adapter (~> 1.3.8)
+      jdbc-sqlite3 (~> 3.7.2)
     activeresource (3.2.18)
       activemodel (= 3.2.18)
       activesupport (= 3.2.18)
@@ -136,6 +141,7 @@ GEM
     inherited_resources (1.5.0)
       has_scope (~> 0.6.0.rc)
       responders (~> 1.0)
+    jdbc-sqlite3 (3.7.2.1)
     journey (1.0.4)
     jquery-rails (3.1.0)
       railties (>= 3.0, < 5.0)
@@ -258,7 +264,6 @@ GEM
       multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
-    sqlite3 (1.3.9)
     therubyracer (0.12.1)
       libv8 (~> 3.16.14.0)
       ref
@@ -285,6 +290,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activerecord-jdbcsqlite3-adapter
   acts_as_published!
   capybara
   coffee-rails
@@ -302,7 +308,6 @@ DEPENDENCIES
   rspec-rails (~> 2.12.0)
   sass-rails
   shoulda-matchers
-  sqlite3
   therubyracer
   therubyrhino
   yard

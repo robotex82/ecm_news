@@ -12,7 +12,7 @@ Ecm::News.configure do |config|
   # Accepted markup languages
   #
   # default: config.markup_languages = %w[ markdown rdoc textile ]
-  config.markup_languages = %w[ markdown rdoc textile ]
+  config.markup_languages = %w[ none textile ]
 
   # Default markup language
   #
